@@ -18,7 +18,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 @Order(7)
 public class CmdbCrudCredentialsFilter extends CmdbCrudAwareFilter {
 

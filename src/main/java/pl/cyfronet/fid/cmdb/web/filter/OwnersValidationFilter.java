@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import pl.cyfronet.fid.cmdb.pdp.EntityStructure;
 import pl.cyfronet.fid.cmdb.web.ResettableStreamHttpServletRequest;
 
-@Component
+//@Component
 @Order(4)
 public class OwnersValidationFilter extends CmdbCrudAwareFilter {
 

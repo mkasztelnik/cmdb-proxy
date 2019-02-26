@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan(basePackages = { "pl.cyfronet.fid" })
+//@Configuration
+//@EnableAutoConfiguration
+//@ComponentScan(basePackages = { "pl.cyfronet.fid" })
 public class ApplicationConfig {
 
     @Value("${proxy.cmdb.servlet_url}")
@@ -28,7 +28,7 @@ public class ApplicationConfig {
     @Value("${proxy.cmdb.logging_enabled ?: false}")
     private String loggingEnabled;
 
-    @Bean
+//    @Bean
     public ServletRegistrationBean cmdbProxyBean() {
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new ProxyServlet(), cmdbUrl);
         servletRegistrationBean.addInitParameter("targetUri", cmdbTargetUrl);
@@ -38,7 +38,7 @@ public class ApplicationConfig {
         return servletRegistrationBean;
     }
 
-    @Bean
+//    @Bean
     public ServletRegistrationBean cmdbCrudProxyBean() {
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new ProxyServlet(), cmdbCrudUrl);
         servletRegistrationBean.addInitParameter("targetUri", cmdbCrudTargetUrl);

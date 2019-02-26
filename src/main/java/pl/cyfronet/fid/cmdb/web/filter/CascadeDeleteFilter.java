@@ -23,7 +23,7 @@ import pl.cyfronet.fid.cmdb.service.Fetcher;
 import pl.cyfronet.fid.cmdb.web.CustomHeaderHttpServletRequest;
 import pl.cyfronet.fid.cmdb.web.ResettableStreamHttpServletRequest;
 
-@Component
+//@Component
 @Order(5)
 public class CascadeDeleteFilter extends CmdbCrudAwareFilter {
 

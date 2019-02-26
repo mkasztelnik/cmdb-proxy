@@ -23,7 +23,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 
 import pl.cyfronet.fid.cmdb.pdp.Pdp;
 
-@Component
+//@Component
 @Order(3)
 public class AuthorizationFilter extends CmdbCrudAwareFilter {
 

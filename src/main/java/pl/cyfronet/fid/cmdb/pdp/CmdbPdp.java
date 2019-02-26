@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@Service
+//@Service
 @Profile({"development", "production"})
 public class CmdbPdp implements Pdp {
 

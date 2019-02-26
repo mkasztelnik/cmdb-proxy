@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Service
+//@Service
 @Profile({"development", "production"})
 public class CmdbEntityStructure implements EntityStructure {
 

@@ -19,7 +19,7 @@ import pl.cyfronet.fid.cmdb.pdp.Entity;
 import pl.cyfronet.fid.cmdb.pdp.EntityStructure;
 import pl.cyfronet.fid.cmdb.util.CollectionUtil;
 
-@Service
+//@Service
 public class Fetcher {
 
     @Value("${proxy.cmdb-crud.target_url}")

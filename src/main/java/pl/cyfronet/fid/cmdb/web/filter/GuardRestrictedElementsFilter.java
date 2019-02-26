@@ -20,7 +20,7 @@ import pl.cyfronet.fid.cmdb.pdp.EntityStructure;
 import pl.cyfronet.fid.cmdb.service.Fetcher;
 import pl.cyfronet.fid.cmdb.util.CollectionUtil;
 
-@Component
+//@Component
 @Order(6)
 public class GuardRestrictedElementsFilter extends CmdbCrudAwareFilter {
 

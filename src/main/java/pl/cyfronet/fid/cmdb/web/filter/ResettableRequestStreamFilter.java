@@ -13,7 +13,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import pl.cyfronet.fid.cmdb.web.ResettableStreamHttpServletRequest;
 
-@Component
+//@Component
 @Order(2)
 public class ResettableRequestStreamFilter extends OncePerRequestFilter {
 

@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import pl.cyfronet.fid.cmdb.util.CollectionUtil;
 
-@Component
+//@Component
 @Order(1)
 public class OidcAuthenticationFilter extends OncePerRequestFilter {
 
