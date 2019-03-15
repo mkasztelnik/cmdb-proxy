@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.cyfronet.fid.cmdb.bean.Image;
 import pl.cyfronet.fid.cmdb.bean.Service;
 import pl.cyfronet.fid.cmdb.bean.Site;
+import pl.cyfronet.fid.cmdb.bean.object.*;
 
 import java.io.IOException;
 
@@ -30,6 +31,7 @@ public class RestPutController {
 
     private ObjectMapper mapper = new ObjectMapper() {
         private com.fasterxml.jackson.databind.ObjectMapper jacksonObjectMapper = new com.fasterxml.jackson.databind.ObjectMapper();
+
         @Override
         public <T> T readValue(String s, Class<T> aClass) {
             try {
@@ -51,27 +53,27 @@ public class RestPutController {
 
     @RequestMapping(value = "/site", method = RequestMethod.PUT)
     public @ResponseBody
-    String updateSite(@RequestBody Site site) throws UnirestException {
+    String updateSite(@RequestBody SiteObjectRev site) throws UnirestException {
         String jsonInString = mapper.writeValue(site);
-        HttpRequestWithBody request = Unirest.put(cmdbUrl+site.getId()).basicAuth(login, password);
+        HttpRequestWithBody request = Unirest.put(cmdbUrl + "/" + site.getId()).basicAuth(login, password);
         request.body(jsonInString);
         return request.asString().getBody();
     }
 
-    @RequestMapping(value = "/service", method = RequestMethod.PUT,consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/service", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
-    String updateService(@RequestBody Service service) throws UnirestException {
+    String updateService(@RequestBody ServiceObjectRev service) throws UnirestException {
         String jsonInString = mapper.writeValue(service);
-        HttpRequestWithBody request = Unirest.put(cmdbUrl+service.getId()).basicAuth(login, password);
+        HttpRequestWithBody request = Unirest.put(cmdbUrl + "/" + service.getId()).basicAuth(login, password);
         request.body(jsonInString);
         return request.asString().getBody();
     }
 
-    @RequestMapping(value = "/image", method = RequestMethod.PUT,consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/image", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
-    String updateImage(@RequestBody Image image) throws UnirestException {
+    String updateImage(@RequestBody ImageObjectRev image) throws UnirestException {
         String jsonInString = mapper.writeValue(image);
-        HttpRequestWithBody request = Unirest.put(cmdbUrl+image.getId()).basicAuth(login, password);
+        HttpRequestWithBody request = Unirest.put(cmdbUrl + "/" + image.getId()).basicAuth(login, password);
         request.body(jsonInString);
         return request.asString().getBody();
     }
